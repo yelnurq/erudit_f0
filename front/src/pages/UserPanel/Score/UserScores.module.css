@@ -1,0 +1,540 @@
+/* Общие стили для контейнеров */
+.userscores {
+    padding-top: 25px;
+
+
+  }
+  
+
+
+
+
+  /* Заголовок профиля */
+  .profileHeader, .title {
+    font-size: 23px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Стиль для групп ввода */
+  .inputGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+  
+  /* Метки */
+  .inputGroup label {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-right: 15px;
+    width: 140px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  /* Поля ввода */
+  .inputGroup input {
+    flex-grow: 1;
+    padding: 12px;
+    font-family: "Nunito";
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .inputGroup input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Кнопки */
+  .submitButton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .submitButton:active {
+    background-color: #388e3c;
+    transform: scale(1);
+  }
+  
+  /* Сообщения об успехе или ошибке */
+  .successMessage, .errorMessage {
+    margin-top: 16px;
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+  
+  .successMessage {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .errorMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Блоки активности */
+  .activity {
+    background-color: #fff;
+    padding: 5px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 16px;
+    color: #34495e;
+    transition: all 0.3s ease;
+  }
+  
+  .activity:hover {
+    background-color: #1a94d1;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+.userTableWrapper {
+  overflow-x: auto;
+}
+
+    
+  .activity:hover span {
+    color: white;
+  }
+  
+  /* Блок пользователя */
+  .userBlock {
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  /* Стили для таблицы */
+  .userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .userTable th, .userTable td {
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .userTable th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  }
+  
+  .userTable td {
+    background-color: #fff;
+    color: #555;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
+  }
+  
+  .userTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .userTable tr:hover :not(th) {
+    background-color: #1a94d1;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  /* Заголовок таблицы */
+  h4 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2980b9;
+    margin-top: 20px;
+  }
+  
+  /* Стили для сообщений об ошибках */
+  .error {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  /* Добавление горизонтальной линии */
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 30px 0;
+  }
+  
+ 
+    .skeletons {
+        width: 500px;
+        height: 40px;
+        margin-top: 5px;
+        background-color: #dcdcdc44;
+        border-radius: 5px;
+    }
+
+    
+
+  /* Общий контейнер для последней оценки */
+.lastScore {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-weight: 400;
+    color:#34495e;
+    
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  
+  .lastScore:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Усиленная тень при наведении */
+  }
+  
+  /* Заголовок "Последняя оценка" */
+  .lastScoreTitle {
+    font-size: 18px;
+    color:#34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+.lastFive {
+  padding-top: 20px;
+  transition: 300ms;
+}
+
+  .lastFive a {
+    font-size: 18px;
+    color:#34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+  }
+  .lastFive:hover {
+    transform: scale(1.01);
+  }
+  
+  
+  .commonSpan {
+    color: #2980b9;
+    font-weight: 600;
+  }
+  .skeleton-item {
+    width: 400px;
+    max-width: 100%; /* Применяем максимальную ширину */
+  }
+
+
+  /* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .profileContainer, .userscores {
+      padding: 15px;
+  }
+  .skeletons {
+    width: 100%;
+  }
+  .skeleton-item {
+    width: 50wh; /* Уменьшаем ширину до 90% на маленьких экранах */
+  }
+
+  .profileHeader, .title {
+      font-size: 1.4rem;
+      margin-top: 0;
+  }
+
+  .inputGroup input {
+      font-size: 0.85rem;
+  }
+
+  .submitButton {
+      font-size: 0.9rem;
+  }
+
+  .inputGroup {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .inputGroup label {
+      margin-bottom: 8px;
+      width: 100%;
+      text-align: left;
+  }
+
+  .inputGroup input {
+      width: 100%;
+  }
+
+  .activity, .userBlock {
+      padding: 5px;
+  }
+
+  .userTable th, .userTable td {
+      font-size: 0.9rem;
+  }
+
+  h4 {
+      font-size: 1.2rem;
+  }
+
+  .userTable {
+      font-size: 0.85rem;
+  }
+
+  /* Блоки активности */
+  .activity {
+      padding: 5px 10px;
+      font-size: 16px;
+  }
+
+  /* Заголовок таблицы */
+  .lastScoreTitle, .lastFive {
+      font-size: 16px;
+  }
+
+  .lastScore {
+      font-size: 14px;
+  }
+
+  /* Уменьшаем отступы и размеры для улучшения восприятия */
+  .userTable th, .userTable td {
+      padding: 10px;
+  }
+
+  .submitButton {
+      font-size: 1rem;
+      padding: 12px;
+  }
+
+  /* Для горизонтальной прокрутки таблицы */
+  .userTableWrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  /* Уменьшаем тень при hover */
+  .activity:hover, .userTable tr:hover :not(th) {
+      transform: translateY(0);
+      box-shadow: none;
+  }
+
+  /* Разделитель (горизонтальная линия) */
+  .separator {
+      margin: 15px 0;
+  }
+
+  /* Контейнер для последней оценки */
+  .lastScore {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+
+  .lastScore:hover {
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1); /* Уменьшенная тень */
+  }
+
+  /* Табы */
+  .tabs button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+  
+  /* Для блока пользователя (userBlock) */
+  .userBlock {
+      margin-top: 15px;
+      padding: 15px;
+  }
+
+  .userBlock .activity {
+      font-size: 14px;
+  }
+
+  .lastFive {
+    padding-top: 5px;
+  }
+
+  .lastFive a{
+    padding-left: 0;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .profileContainer, .userscores {
+      padding: 15px;
+  }
+
+
+  .profileHeader, .title {
+      font-size: 1.4rem;
+      margin-top: 20px;
+  }
+
+  .inputGroup input {
+      font-size: 0.85rem;
+  }
+
+  .submitButton {
+      font-size: 0.9rem;
+  }
+
+  .inputGroup {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .inputGroup label {
+      margin-bottom: 8px;
+      width: 100%;
+      text-align: left;
+  }
+
+  .inputGroup input {
+      width: 100%;
+  }
+
+  .activity, .userBlock {
+      padding: 5px;
+  }
+
+  .userTable th, .userTable td {
+      font-size: 0.9rem;
+  }
+
+  h4 {
+      font-size: 1.2rem;
+  }
+
+  .userTable {
+      font-size: 0.85rem;
+  }
+
+  /* Блоки активности */
+  .activity {
+      padding: 5px 10px;
+      font-size: 16px;
+  }
+
+  /* Заголовок таблицы */
+  .lastScoreTitle, .lastFive {
+      font-size: 16px;
+  }
+
+  .lastScore {
+      font-size: 14px;
+  }
+
+  /* Уменьшаем отступы и размеры для улучшения восприятия */
+  .userTable th, .userTable td {
+      padding: 10px;
+  }
+
+  .submitButton {
+      font-size: 1rem;
+      padding: 12px;
+  }
+
+  /* Для горизонтальной прокрутки таблицы */
+  .userTableWrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  /* Уменьшаем тень при hover */
+  .activity:hover, .userTable tr:hover :not(th) {
+      transform: translateY(0);
+      box-shadow: none;
+  }
+
+  /* Разделитель (горизонтальная линия) */
+  .separator {
+      margin: 15px 0;
+  }
+
+  /* Контейнер для последней оценки */
+  .lastScore {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+
+  .lastScore:hover {
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1); /* Уменьшенная тень */
+  }
+
+  /* Табы */
+  .tabs button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+  
+  /* Для блока пользователя (userBlock) */
+  .userBlock {
+      margin-top: 15px;
+      padding: 15px;
+  }
+
+  .userBlock .activity {
+      font-size: 14px;
+  }
+
+  .lastFive {
+    padding-top: 5px;
+  }
+
+  .lastFive a{
+    padding-left: 0;
+  }
+}

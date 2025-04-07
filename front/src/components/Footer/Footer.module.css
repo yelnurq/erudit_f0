@@ -1,0 +1,164 @@
+
+
+.footerContainer {
+    display: flex;
+    margin: 0 200px;
+    z-index: 10;    
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    justify-content: space-between;
+}
+
+
+.about {
+    width: 400px;
+}
+
+
+.sectionTitle {
+    font-size: 19px;
+    color: #525252;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.sectionTitle img {
+    width: 140px;
+    display: none;
+    filter: grayscale(90%);
+}
+
+.sectionDesc {
+    font-size: 16px;
+    text-align: justify;
+    color: #626262;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.sectionNav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sectionNav img {
+    width: 30px;
+}
+
+.sectionItem {
+    font-size: 15px;
+    text-align: left;
+    color: #808080;
+    font-weight: 400;
+}
+
+
+.sectionItem a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #a5a5a5;
+    font-weight: 400;
+}
+
+
+.sectionItem a:hover {
+    color:black;
+    transition: 0.3s;
+}
+
+
+
+
+.icon1 {
+    z-index: -1;
+    width: 100px;
+    display: none;
+    top: 50px;
+    left: 400px;
+    filter: blur(1px);
+}
+
+.icon2 {
+    z-index: -1;
+    width: 150px;
+    top: 200px;
+    right: 200px;
+    filter: blur(0px);
+}
+
+
+@media (max-width: 1024px) {
+    .footerContainer {
+        flex-direction: column; /* Элементы будут в столбик */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .sectionNav {
+        gap: 10px; /* Добавляем расстояние между элементами */
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        margin: 20px;
+    }
+    .footer {
+        padding: 20px 0; /* Уменьшаем отступы */
+    }
+
+    .sectionTitle {
+        font-size: 18px;
+ 
+    }
+
+    .about {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.748);
+        border-top: 1px solid rgba(128, 128, 128, 0.748);
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+
+    .social {
+        padding-bottom: 20px;
+    }
+    .contact {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.748);
+        border-top: 1px solid rgba(128, 128, 128, 0.748);
+        padding-bottom: 20px;
+    }
+
+
+    .sectionDesc {
+        font-size: 15px;
+    }
+
+    .sectionItem {
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .footerContainer {
+        padding: 0 10px;
+    }
+
+    .sectionTitle {
+        font-size: 16px;
+    }
+
+    .sectionDesc {
+        font-size: 14px;
+    }
+
+    .sectionItem {
+        font-size: 13px;
+    }
+}

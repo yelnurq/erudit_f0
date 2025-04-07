@@ -1,0 +1,326 @@
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 110vh;
+}
+
+
+footer {
+    margin-top: auto; /* Позволяет футеру оставаться внизу */
+    background-color: #ffffff;
+    color: white;
+    padding: 30px 0;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.08);
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+}
+
+/* Основные стили */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 50px;
+      background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+    position: relative; /* Для позиционирования бургера */
+}
+
+.home {
+    margin: 0;
+}
+
+.content {
+    margin: 40px 140px;
+
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Плавный переход для навигации */
+}
+
+/* Стили для активной ссылки */
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #1677a7;
+}
+
+.active {
+    color: #1677a7;
+    font-weight: bold;
+}
+
+.userLink img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Стили для бургер-меню */
+.burger {
+    display: none; /* Скрываем бургер по умолчанию */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    transition: 300ms;
+    
+    padding: 10px;
+    border-radius: 5px; /* Скругленные углы */
+}
+
+.burger span {
+    width: 25px;
+    height: 2px;
+    background-color: #333; /* Белые полоски */
+    border-radius: 5px;
+}
+
+
+
+.loginButton {
+    /* Кнопки */
+   padding: 7px 10px;
+   border: none;
+   text-decoration: none;
+   border: 1px solid #2980b9;
+   color: rgb(66, 66, 66);
+   border-radius: 5px;
+   cursor: pointer;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   transition: all 0.3s ease;
+   text-align: center;
+   font-size: 17px;
+   font-weight: 500;
+ 
+
+}
+
+.loginButton:hover {
+   background-color: #2980b9;
+   transform: scale(1.01);
+   color: white;
+ }
+
+
+.logoutButton {
+     /* Кнопки */
+    padding: 7px 10px;
+    border: none;
+    border: 1px solid #2980b9;
+    color: rgb(66, 66, 66);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+  
+
+}
+
+.logoutButton:hover {
+    background-color: #2980b9;
+    transform: scale(1.01);
+    color: white;
+  }
+
+
+  .icon1 {
+    height: 700px;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: 100px;
+    filter: blur(15px);
+}
+
+.icon2 {
+    height: 700px;
+    z-index: -2;
+    filter: blur(15px);
+    position: absolute;
+    top: 100px;
+    right: 0;
+    transform: scaleX(-1); /* Отражение по горизонтали */
+
+}
+
+
+
+@media (max-width:1200px) {
+    .authButtons {
+        margin: 10px;
+    }
+
+    .icon1 {
+        height: 500px;
+    }
+    .icon2 {
+        height: 500px;
+    }
+
+
+    .nav {
+        display: flex; /* Показать меню по умолчанию для анимации */
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: revert;
+        background-color: #fff; /* Белый фон для меню */
+        padding: 20px 0;
+        position: absolute;
+        top:60px; /* Чтобы меню появлялось под хедером */
+        left: 0;
+        z-index: 10;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Начальная непрозрачность */
+        visibility: hidden; /* Скрываем элементы для предотвращения их перемещения */
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    .nav.open {
+        opacity: 1; /* Полная видимость */
+        visibility: visible; /* Делает меню видимым */
+    }
+
+    .burger {
+        display: flex; /* Показать бургер-меню на мобильных устройствах */
+    }
+
+    
+    .header {
+        margin: 0;
+        background-color: white;
+        padding: 15px;
+        display: block;
+        align-items: center;
+    }
+    .logo {
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo img {
+        max-width: 170px;
+    }
+
+    .navLink {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .userLink img {
+        width: 25px;
+        height: 25px;
+    }
+    .content {
+        margin: 40px 10px;
+    }
+
+
+    
+    .loginButton {
+        display: block;
+    }
+    .logoutButton {
+        width: 100%;
+    }
+ 
+
+}
+
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+
+    .header {
+        margin: 0;
+        background-color: white;
+        padding: 15px;
+        display: block;
+        align-items: center;
+    }
+    .logo {
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo img {
+        max-width: 170px;
+    }
+
+    .logoutButton {
+        font-size: 15px;
+    }
+    .navLink {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .userLink img {
+        width: 25px;
+        height: 25px;
+    }
+    .content {
+        margin: 0 10px;
+    }
+
+
+    .nav {
+        display: flex; /* Показать меню по умолчанию для анимации */
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: revert;
+        background-color: #fff; /* Белый фон для меню */
+        padding: 20px 0;
+        position: absolute;
+        top:60px; /* Чтобы меню появлялось под хедером */
+        left: 0;
+        z-index: 10;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Начальная непрозрачность */
+        visibility: hidden; /* Скрываем элементы для предотвращения их перемещения */
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    .nav.open {
+        opacity: 1; /* Полная видимость */
+        visibility: visible; /* Делает меню видимым */
+    }
+
+    .burger {
+        display: flex; /* Показать бургер-меню на мобильных устройствах */
+    }
+}
+

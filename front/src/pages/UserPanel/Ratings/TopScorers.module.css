@@ -1,0 +1,62 @@
+.topScorersContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topScorersTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .loadingText {
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .noTopScorers {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .topScorersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .topScorersTable th,
+  .topScorersTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .topScorersTable th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .topScorersTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .topScorersTable tr:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .noTopScorers {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+  }
+  

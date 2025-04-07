@@ -1,0 +1,156 @@
+.loginForm {
+  width: 400px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 45%;
+  background-color: #fff;
+  height: 40%;
+  left: 50%;
+  transform: translate(-49%, -49%);
+}
+
+form {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.loginForm .loginForm_title {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 18px;
+
+}
+
+.backNav {
+  font-size: 15px;
+}
+
+.back {
+  text-align: center;
+  margin: 15px;
+}
+
+.reg_nav_text{
+  margin: 0;
+  font-size: 15px;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  font-family: "Nunito";
+}
+
+.inputGroup input::placeholder {
+  font-size: 16px;
+}
+
+.inputGroup input {
+  border-radius: 10px;
+  font-family: "Nunito";
+
+  width: 100%;
+  padding: 10px 25px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.successMessage {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.submitButton {
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 200px;
+  padding: 10px;
+  background-color: #FF4B4E;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #e04b4e;
+}
+
+.light2 {
+  position: absolute;
+  z-index: -12;
+  display: none;
+  top: 0;
+  left: 10%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with a max width of 768px (tablets, small screens) */
+@media (max-width: 768px) {
+  .loginForm {
+      width: 80%;
+      height: auto;
+      top: 30%;
+      transform: translate(-50%, -30%);
+      padding: 20px 10px;
+  }
+
+  .loginForm h2 {
+      font-size: 22px;
+  }
+
+  .inputGroup input {
+      font-size: 16px;
+      padding: 8px 20px;
+  }
+
+  .submitButton {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+  }
+}
+
+/* For devices with a max width of 480px (smartphones, small devices) */
+@media (max-width: 480px) {
+  .loginForm {
+      width: 90%;
+      padding: 15px 10px;
+      top: 25%;
+      transform: translate(-50%, -25%);
+  }
+
+  .loginForm h2 {
+      font-size: 20px;
+  }
+
+  .inputGroup input {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+
+  .submitButton {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+  }
+}

@@ -1,0 +1,87 @@
+.ratingsContainer {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f4f4f4;
+}
+
+.ratingsTitle {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.loadingText {
+  color: #666;
+  font-size: 18px;
+}
+
+.subjectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subjectItem {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subjectItem:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  background-color: #00aaff;
+  color: white;
+}
+
+.topScorersContainer {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topScorersTitle {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.topScorersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topScorersTable th,
+.topScorersTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.topScorersTable th {
+  background-color: #f7f7f7;
+  color: #000;
+}
+
+.topScorersTable td {
+  background-color: #fff;
+}
+
+.noTopScorers {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+}

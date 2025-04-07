@@ -1,0 +1,297 @@
+.questionsContainer {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.questionsTitle {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.loadingMessage {
+  color: #666;
+  font-size: 18px;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filterTools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.questionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.questionsTable th,
+.questionsTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.questionsTable th {
+  background-color: #f7f7f7;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.questionsTable td {
+  background-color: #fff;
+}
+
+.questionsTable tr:hover td {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.deleteBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #c82333;
+}
+
+.editBtn {
+  background-color: #505f70;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #36404d;
+}
+
+.addBtn {
+  background-color: #00aaff;
+  color: white;
+}
+
+.addBtn:hover {
+  background-color: #008ecc;
+}
+
+.selectContainer {
+  width: 200px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filterForm {
+  display: flex;
+  gap: 10px;
+}
+
+.filterBtn {
+  background-color: #505f70;
+  color: white;
+}
+
+.filterBtn:hover {
+  background-color: #36404d;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.modal,
+.addQuestionModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent,
+.addQuestionContent {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent h3,
+.addQuestionContent h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #000;
+}
+
+.inputField {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.saveBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #218838;
+}
+
+.cancelBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 1024px) {
+  .tools {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filterTools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .questionsTable th,
+  .questionsTable td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination button,
+  .pagination select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .questionsContainer {
+    padding: 15px;
+  }
+
+  .questionsTable th,
+  .questionsTable td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+  }
+
+  .modalContent,
+  .addQuestionContent {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .questionsContainer {
+    padding: 10px;
+  }
+
+  .tools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .questionsTable th,
+  .questionsTable td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button,
+  .pagination select {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .filterForm {
+    flex-direction: column;
+  }
+}

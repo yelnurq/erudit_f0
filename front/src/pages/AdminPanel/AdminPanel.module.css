@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  margin-left: 300px;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.scorersCount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}

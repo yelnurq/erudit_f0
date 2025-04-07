@@ -1,0 +1,454 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    color: #2B2B2B;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 300ms;
+}
+
+.navLink:hover {
+    color: #FF4B4E;
+    text-decoration: underline;
+}
+
+
+.quote {
+    background-color: #f5f6f8;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+
+    
+}
+
+.quoteIcon {
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 30px;
+}
+
+.quoteContainer {
+    margin: 40px 300px;
+    padding: 0px;
+
+}
+
+.right_block img {
+    width: 500px;
+}
+
+.quoteText {
+    font-size: 20px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.author {
+    font-size: 22px;
+    text-align: right;
+    color: #2e2e2e;
+    font-weight: 600;
+    
+}
+
+.stages {
+    background-color: white;
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+}
+
+.stagesTitle {
+    font-size: 24px;
+    color:#333;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color:#2980b9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timelineItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color:#2980b9;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.left_block {
+    margin: 0 20px;
+}
+
+.stageIcon1 {
+    position: absolute;
+    width: 100px;
+    top: 150px;
+    filter: blur(4px);
+    left: 0;
+}
+
+.stageIcon2 {
+    position: absolute;
+    filter: blur(4px);
+    width: 100px;
+    bottom: 150px;
+    transform: rotate(180deg);
+    right: 0;
+}
+
+.line {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #2980b9;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.text strong {
+    color: #333;
+}
+
+.text {
+    width: 43%;
+    font-size: 17px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timelineItem:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timelineItem:nth-child(even) {
+    flex-direction: row;
+}
+
+.timelineItem:last-child .line {
+    display: none;
+}
+.faq {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faqTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faqItem {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.faqQuestion {
+    color: #2B2B2B;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faqQuestion span {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:padding 0.3s ease-in-out;
+    padding: 0 10px;
+}
+
+.faqItem.active .faqAnswer {
+    max-height: 150px; /* Достаточное значение, чтобы вместить текст */
+    opacity: 1;
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+
+.faqItem.active .faqQuestion span {
+    transform: rotate(45deg);
+}
+
+
+.mainContainer {
+    display: flex;
+    margin: 30px 50px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.main {
+    padding: 30px 0 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+p.title {
+    color: #164a6c;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    font-size: 40px;
+}
+
+p.desc {
+    color: #2B2B2B;
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.navBtn {
+    margin: 50px 0;
+}
+
+.navLinkBtn {
+    background-color: #FF4B4E;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    transition: 300ms;
+    padding: 10px 20px;
+}
+
+.navLinkBtn:hover {
+    padding: 10px 30px;
+    color: #350303;
+}
+.light {
+    position: absolute;
+    z-index: -1;
+    right: 150px;
+}
+
+/* Оригинальные стили остаются без изменений */
+/* Общие стили для адаптивности */
+@media (max-width: 1024px) {
+
+    p.title {
+        font-size: 35px;
+    }
+
+    p.desc {
+        font-size: 17px;
+    }
+
+    .navLinkBtn {
+        font-size: 17px;
+
+    }
+
+    .timelineItem:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .timelineItem:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .circle {
+        margin-bottom: 20px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .timelineItem:last-child .line {
+     
+        display: none;
+    }
+    .quoteContainer {
+        margin: 30px 40px;
+    }   
+    .right_block img {
+        width: 400px;
+    }
+    .timelineItem {
+        max-width: 95%;
+        flex-direction: column;
+    }
+    .text {
+        width: 55%;
+        font-size: 17px;
+    }
+    .stagesTitle, .faqTitle {
+        font-size: 22px;
+    }
+    .stageIcon1, .stageIcon2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    p.title {
+        font-size: 30px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .right_block img {
+        width: 300px;
+    }
+    .nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .quoteContainer {
+        margin: 20px;
+    }
+    .quoteText {
+        font-size: 18px;
+    }
+    .author {
+        font-size: 18px;
+    }
+    .timeline::before {
+        left: 15px;
+    }
+    .timelineItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text {
+        width: 85%;
+        font-size: 16px;
+        padding: 12px;
+    }
+    .stagesTitle, .faqTitle {
+        font-size: 20px;
+    }
+    .mainContainer {
+        margin: 40px 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .mainContainer {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .mainContainer {
+        flex-direction: column;
+
+    }
+    p.title {
+        font-size: 25px;
+    }
+    .quoteText {
+        font-size: 16px;
+    }
+    .author {
+        font-size: 16px;
+    }
+    .timeline::before {
+        display: none;
+    }
+    .timelineItem {
+        max-width: 100%;
+    }
+    .right_block img {
+        width: 300;
+    }
+    .text {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+    }
+    .navLinkBtn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    .navLink {
+        font-size: 16px;
+    }
+    .faqQuestion {
+        font-size: 16px;
+    }
+    .stagesTitle, .faqTitle {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .right_block img {
+        width: 250px;
+    }
+}

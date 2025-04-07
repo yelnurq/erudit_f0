@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background-color:#f5f6f8;
+  font-family: 'Nunito', sans-serif; /* добавлено запасное семейство шрифтов */
+}
+
+code {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Обновленный контейнер приложения */
+.App {
+  height: 100vh;
+  margin: 0 auto;
+
+}
+
+.profileBlocks {
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(173,165,255,1) 49%, rgba(211,248,255,1) 100%);
+}
+
+
+/* Медиазапросы для адаптивности */
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .App {
+  }
+}
+

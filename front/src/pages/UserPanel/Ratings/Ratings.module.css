@@ -1,0 +1,292 @@
+/* Общие стили для контейнеров */
+.ratingsContainer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ratingsContainer:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.ratingsBlock {
+  width: 100%;
+}
+
+.ratingsTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Стили для сообщений об ошибках */
+.errorMessage {
+  color: #ff4d4d;
+  font-size: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Стили для загрузки */
+.loadingText {
+  margin-top: 50px;
+  color: #666;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+
+
+
+/* Стили для списка предметов */
+.subjectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.subjectItem {
+  padding: 15px;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease;
+  width: 150px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.subjectItem:hover {
+  background-color: #1a94d1;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.selected {
+  background-color: #1677a7;
+  color: white;
+}
+
+.topScorersContainer {
+  border-top: 1px solid rgb(193, 193, 193);
+}
+
+/* Стили для таблицы */
+.topScorersTable {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-collapse: collapse;
+  margin-top: 50px;
+  border-radius: 8px;  /* Круглые углы для таблицы */
+  overflow: hidden; /* Чтобы не было скруглений у ячеек снаружи */
+}
+
+.topScorersTable th,
+.topScorersTable td {
+  padding: 15px;  /* Увеличенные отступы для лучшего восприятия */
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500; /* Тот же вес шрифта, что и для subjectItem */
+  transition: all 0.3s ease; /* Плавные переходы */
+}
+
+  
+.topScorersTable th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+
+/* Ячейки таблицы */
+.topScorersTable td {
+  background-color: #fff;
+  color: #555;
+  border-radius: 8px; /* Круглые углы для ячеек */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px; /* Легкая тень */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Плавные переходы */
+}
+
+/* Чередование цветов строк */
+.topScorersTable tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+.topScorersTable tr:hover td {
+  background-color: #1a94d1;
+  color: white;
+  transform: translateY(-5px);  /* Поднятие строки при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Легкая тень при наведении */
+  cursor: pointer;
+}
+
+/* Стили для отсутствия топ-скореров */
+.noTopScorers {
+  font-size: 20px;
+  color: #999;
+  text-align: center;
+  font-style: italic;
+  margin-top: 50px;
+}
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; /* Center pagination on mobile */
+  align-items: center;
+  }
+
+.paginationButton {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #1a94d1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px; /* Slightly smaller font size for better fitting on mobile */
+}
+
+.paginationButton:hover {
+  background-color: #167b99;
+  transform: scale(1.05);
+}
+
+.paginationButton:disabled {
+  background-color: #c1c1c1;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  margin: 0 15px;
+  text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .pagination {
+    align-items: center; /* Center everything */
+  }
+
+  .paginationButton {
+    padding: 8px 16px; /* Smaller padding on mobile */
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .pagination span {
+    font-size: 12px; /* Slightly smaller font size for mobile */
+    margin: 10px 0; /* Add vertical space between buttons and page number */
+  }
+}
+
+
+/* Адаптивность */
+
+/* Для планшетов (до 1024px) */
+@media (max-width: 1024px) {
+  .ratingsTitle {
+    font-size: 22px;
+  }
+
+  .subjectItem {
+    width: 180px;
+    font-size: 16px;
+  }
+
+  .subjectList {
+    gap: 15px;
+  }
+
+  .topScorersTable th,
+  .topScorersTable td {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .noTopScorers {
+    font-size: 15px;
+  }
+
+.loadingText {
+  font-size: 15px;
+
+}
+}
+
+/* Для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+  .ratingsContainer {
+    padding: 20px;
+  }
+
+  .ratingsTitle {
+    font-size: 20px;
+  }
+
+  .subjectItem {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .subjectList {
+    gap: 10px;
+  }
+
+  .topScorersTable {
+    font-size: 12px;
+  }
+
+  .topScorersTable th,
+  .topScorersTable td {
+    padding: 10px;
+  }
+
+  .topScorersTableWrapper {
+    overflow: auto; /* Добавляем горизонтальную прокрутку для таблицы */
+  }
+}
+
+/* Для мобильных телефонов (до 480px) */
+@media (max-width: 480px) {
+  .ratingsContainer {
+    padding: 15px;
+  }
+
+
+  .subjectItem {
+    width: 100px;
+    padding: 10px;
+    }
+
+  .subjectList {
+    gap: 8px;
+  }
+
+  .topScorersTable th,
+  .topScorersTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+
+}
